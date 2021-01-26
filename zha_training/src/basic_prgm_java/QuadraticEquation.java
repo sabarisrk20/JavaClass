@@ -22,16 +22,16 @@ public class QuadraticEquation {
 		if (deter >= 0) {
 			if (deter > 0) {
 				root1 = (-num2 + Math.sqrt(deter)) / (2 * num1);
-				root2 = (+num2 + Math.sqrt(deter)) / (2 * num1);
+				root2 = (-num2 - Math.sqrt(deter)) / (2 * num1);
 				System.out.printf("root1 = %.2f and root2 = %.2f", root1, root2);
 			} 
 			if(deter == 0){
-				root1 = root2 = -num2 / (2 * num1);
+				root1 = root2 = num2 / (2 * num1);
 				System.out.printf("root1 = root2 = %.2f;", root1);
 			}
 		}
 		if (deter < 0) {
-			double real = -num2 / (2 * num1);
+			double real = num2 / (2 * num1);
 			double imaginary = Math.sqrt(-deter) / (2 * num1);
 			System.out.printf("root1 = %.2f+%.2fi", real, imaginary);
 			System.out.printf("\nroot2 = %.2f-%.2fi", real, imaginary);
@@ -42,14 +42,14 @@ public class QuadraticEquation {
 		if (deter >= 0) {
 			if (deter > 0) {
 				root1 = (-num2 + Math.sqrt(deter)) / (2 * num1);
-				root2 = (+num2 + Math.sqrt(deter)) / (2 * num1);
+				root2 = (-num2 - Math.sqrt(deter)) / (2 * num1);
 				System.out.printf("root1 = %.2f and root2 = %.2f", root1, root2);
 			} else {
-				root1 = root2 = -num2 / (2 * num1);
+				root1 = root2 = num2 / (2 * num1);
 				System.out.printf("root1 = root2 = %.2f;", root1);
 			}
 		} else {
-			double real = -num2 / (2 * num1);
+			double real = num2 / (2 * num1);
 			double imaginary = Math.sqrt(-deter) / (2 * num1);
 			System.out.printf("root1 = %.2f+%.2fi", real, imaginary);
 			System.out.printf("\nroot2 = %.2f-%.2fi", real, imaginary);
@@ -59,13 +59,13 @@ public class QuadraticEquation {
 		System.out.println("\nUsing else..if");
 		if (deter > 0) {
 			root1 = (-num2 + Math.sqrt(deter)) / (2 * num1);
-			root2 = (+num2 + Math.sqrt(deter)) / (2 * num1);
+			root2 = (-num2 - Math.sqrt(deter)) / (2 * num1);
 			System.out.printf("root1 = %.2f and root2 = %.2f", root1, root2);
 		} else if (deter == 0) {
-			root1 = root2 = -num2 / (2 * num1);
+			root1 = root2 = num2 / (2 * num1);
 			System.out.printf("root1 = root2 = %.2f;", root1);
 		} else {
-			double real = -num2 / (2 * num1);
+			double real = num2 / (2 * num1);
 			double imaginary = Math.sqrt(-deter) / (2 * num1);
 			System.out.printf("root1 = %.2f+%.2fi", real, imaginary);
 			System.out.printf("\nroot2 = %.2f-%.2fi", real, imaginary);
