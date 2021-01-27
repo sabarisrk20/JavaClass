@@ -36,5 +36,6 @@ public class PositiveNegative {
 			System.out.println("The Given is Negative");
 			break;
 		}
+		scan.close();
 	}
 }

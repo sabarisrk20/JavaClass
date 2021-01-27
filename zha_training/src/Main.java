@@ -26,7 +26,7 @@ public class Main {
 			System.out.println(input_number-5);
 	        
 		}
-		
+		sc.close();
 	}
 
 }

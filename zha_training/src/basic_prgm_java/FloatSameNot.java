@@ -22,5 +22,6 @@ public class FloatSameNot {
 		}else if(num1 != num2){
 			System.out.println("The Given two number are not same");
 		}
+		scan.close();
 	}
 }

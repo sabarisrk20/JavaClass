@@ -15,5 +15,6 @@ public class PyramidSeries {
 			}
 			System.out.println();
 		}
+		scan.close();
 	}
 }

@@ -25,7 +25,7 @@ public class matrix {
 			}
 			System.out.println();
 		}
-
+		
 		sc.close();
 	}
 

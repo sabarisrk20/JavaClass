@@ -31,7 +31,7 @@ public class MultipleTable {
 			System.out.println(start + " * " + table + " = " + start * table);
 			start++;
 		}while (start <= end);
-		
+		scan.close();
 	}
 
 }
