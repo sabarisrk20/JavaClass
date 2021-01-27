@@ -9,12 +9,12 @@ public class Bank {
 	public String accName;
 	public int balance, withdraw, deposit;
 
-	public Bank(int accNo, String accName, int withdraw, int deposit) {
+	public Bank(int accNo, String accName, int withdraw, int deposit, int balance) {
 		this.accNo = accNo;
 		this.accName = accName;
 		this.withdraw = withdraw;
 		this.deposit = deposit;
-		this.balance = deposit - withdraw;
+		this.balance = ( balance + deposit ) - withdraw;
 	}
 
 	public static void main(String[] args) {
@@ -31,14 +31,24 @@ public class Bank {
 
 			System.out.print("Enter the Customer Acc no:");
 			int accNo = sc.nextInt();
+			
+			System.out.print("Enter the Balance:");
+			int balance = sc.nextInt();
+
 
 			System.out.print("Enter the Deposit:");
 			int deposit = sc.nextInt();
 
-			System.out.print("Enter the withdraw:");
+			System.out.print("Enter the Withdraw:");
 			int withdraw = sc.nextInt();
 
-			bankArr[itr] = new Bank(accNo, name, withdraw, deposit);
+			if (withdraw > (balance+deposit)) {
+				System.out.println("Insufficiant balance");
+				bankArr[itr] = new Bank(0, null, 0, 0, 0);
+			} else {
+
+				bankArr[itr] = new Bank(accNo, name, withdraw, deposit, balance);
+			}
 		}
 		System.out.printf("%10s %20s %20s %20s %20s", "AccNo", "Name", "Deposit", "Withdraw", "Balance");
 		System.out.println();
